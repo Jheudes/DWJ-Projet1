@@ -3,6 +3,7 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
     <title>Web Agency</title>
 </head>
 
@@ -41,23 +42,27 @@
 
             <div class="slide_img" id="one">
 
-                <img src="..\DWJ-Projet1\webagency_images\images\slider\bg1.jpg">
+                <img src="webagency_images\images\slider\bg1.jpg">
 
-                <label class="prev" for="i2"><span></span></label>
-                <label class="next" for="i2"><span></span></label>
+                <label class="prev" for="i2"><span><i class="fas fa-angle-left" style="font-size:24px"></i></span></label>
+                <label class="next" for="i2"><span></span><i class="fas fa-angle-right" style="font-size:24px"></i></label>
 
             </div>
 
             <div class="slide_img" id="two">
 
-                <img src="..\DWJ-Projet1\webagency_images\images\slider\bg2.jpg">
+                <img src="webagency_images\images\slider\bg2.jpg">
 
-                <label class="prev" for="i1"><span></span></label>
-                <label class="next" for="i1"><span></span></label>
+                <label class="prev" for="i1"><span><i class="fas fa-angle-left" style="font-size:24px"></i></span></label>
+                <label class="next" for="i1"><i class="fas fa-angle-right" style="font-size:24px"></i></label>
 
             </div>
 
-
+            <article id="surslider">
+                <h1><strong>WEB AGENCY</strong>: L'AGENCE DE TOUS VOS PROJETS !</h1><br />
+                <p> Vous avez un projet web ? La WebAgency vous aide a les réaliser !</p>
+                <div id="boutonacceuil"><a href="#"><p>Plus d'Infos</p></a></div>
+            </article>
 
             <div id="nav_slide">
                 <label for="i1" class="dots" id="dot1"></label>
@@ -80,7 +85,7 @@
 
             <div id="nosservices2">
                 <div id="nosservices2imgecran">
-                    <img src="..\DWJ-Projet1\webagency_images\images\main-feature.png" alt="screen">
+                    <img src="webagency_images\images\main-feature.png" alt="screen">
                 </div>
 
                 <div>
@@ -89,7 +94,10 @@
                             <i class="fas fa-chart-line" style="font-size:24px"></i>
                             <div></div>
                         </div>
-                        <p> Nous avons des colaborateurs specialistes en experience utilisateur </p>
+                        <div class="desciptionservice">
+                            <p><strong> UX design </strong></p>
+                            <p> Nous avons des colaborateurs specialistes en experience utilisateur </p>
+                        </div>
                     </div>
 
                     <div class="inservice2">
@@ -97,7 +105,10 @@
                             <i class="fas fa-cubes" style="font-size:24px"></i>
                             <div></div>
                         </div>
-                        <p> Nous nous engageons a fournir a vos client une interface utilisateur qui seras a leurs convenance</p>
+                        <div class="desciptionservice">
+                            <p><strong> UI design</strong></p>
+                            <p> Nous nous engageons a fournir a vos client une interface utilisateur qui seras a leurs convenance</p>
+                        </div>
                     </div>
 
                     <div class="inservice2">
@@ -105,7 +116,10 @@
                             <i class="fas fa-chart-pie" style="font-size:24px"></i>
                             <div></div>
                         </div>
-                        <p> Depuis de nombreuses années nous sommes specialisés en referencement </p>
+                        <div class="desciptionservice">
+                            <p><strong>SEO</strong></p>
+                            <p> Depuis de nombreuses années nous sommes specialisés en referencement </p>
+                        </div>
                     </div>
 
                 </div>
@@ -125,8 +139,19 @@
                 <p> Voici une petite selection des projets que nous avons terminés </p>
             </div>
 
+            <input type="radio" id="p1" name="port" checked />
+            <input type="radio" id="p2" name="port" />
+            <input type="radio" id="p3" name="port" />
+            <input type="radio" id="p4" name="port" />
+            <div id="marginauto">
+                <label class="menuportfolio" for="p1" id="label1"><span>All Work<i class="fas fa-caret-down" style="font-size:24px"></i></span></label>
+                <label class="menuportfolio" for="p2" id="label2"><span>Créative<i class="fas fa-caret-down" style="font-size:24px"></i></span></label>
+                <label class="menuportfolio" for="p3" id="label3"><span>Corporate<i class="fas fa-caret-down" style="font-size:24px"></i></span></label>
+                <label class="menuportfolio" for="p4" id="label4"><span>Portfolio<i class="fas fa-caret-down" style="font-size:24px"></i></span></label>
+            </div>
+
             <div id="div2portfolio">
-                <article class="flexportfolio">
+                <article class="flexportfolio"  id="divinportfolio1">
                     <img src="..\DWJ-Projet1\webagency_images\images\portfolio\01.jpg">
 
                     <div class="banniereportfolio">
@@ -141,11 +166,15 @@
 
                 </article>
 
-                <article class="flexportfolio">
+                <article class="flexportfolio"  id="divinportfolio2">
                     <img src="..\DWJ-Projet1\webagency_images\images\portfolio\02.jpg">
 
                     <div class="banniereportfolio">
-                        Projet 1
+                        <div class="ecritportfolio">
+                        <h3> Projet 2 </h3>
+                        <p> Lapin Carré</p>
+                        </div>
+
                         <a href="#" alt="">
                             <div class="boutonportfolio">
                                 <i class="far fa-eye" style="font-size:24px"></i>
@@ -210,7 +239,7 @@
 
                 </article>
 
-                <article class="flexportfolio">
+                <article class="flexportfolio" id="projetportfolio7">
                     <img src="..\DWJ-Projet1\webagency_images\images\portfolio\07.jpg">
 
                     <div class="banniereportfolio">
@@ -224,7 +253,7 @@
 
                 </article>
 
-                <article class="flexportfolio">
+                <article class="flexportfolio" id="projetportfolio8">
                     <img src="..\DWJ-Projet1\webagency_images\images\portfolio\08.jpg">
 
                     <div class="banniereportfolio">
@@ -238,6 +267,8 @@
 
                 </article>
 
+             
+
             </div>
 
         </section>
@@ -246,6 +277,7 @@
         <section id="contact">
 
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11120.78651775486!2d2.3394851167291257!3d48.874296351067265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e145ccb3091%3A0x9495beee8c96ec27!2s25+Rue+d&#39;Hauteville%2C+75010+Paris!5e0!3m2!1sfr!2sfr!4v1536047281994" width="100%" height="100%" frameborder="0" style="border:0"></iframe>
+            <span id="filtrebleu"></span>
 
             <div id="div1contact">
                 <h2> Contact Info </h2>
