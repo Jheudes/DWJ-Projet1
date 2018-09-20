@@ -51,6 +51,10 @@ h2{
     top: 10%;
 }
 
+.navbutton {/*cache les boutons de nav pour mobile*/
+    display: none;
+}
+
 
 /******Header******/
 
@@ -128,6 +132,9 @@ a:hover{
 #topanchor{
     position:relative;
     top: -100px;
+}
+#showmenu, #showmenu1{
+    display: none;
 }
 
 
@@ -277,6 +284,7 @@ background-color: white;
     height: 100%;
     min-height: 500px;
     background-color: white;
+    position: relative;
 }
 
 #nosservices {
@@ -353,10 +361,9 @@ background-color: white;
 #portfolio{
     padding-top: 80px;
     padding-top: 8%;
-    clear: left;
     background-color: whitesmoke;
-    position: relative;
     height: 100%;
+    position: relative;
 }
 
 #portfolio input{
@@ -596,10 +603,142 @@ form textarea{
     color: white;
 }
 
-@media screen and (min-width: 150px) and (max-width: 680px){
+/****************************RESPONSIVE************************************/
 
+/**********Telephones/Tablettes*************/
+@media screen and (max-device-width: 639px){
+
+
+    /*** header/navigation ***/
+    #inmenuheader {/*planquage du menu et mise en forme*/
+        display: none;
+    }
+    #logo{/* gestion du logo*/
+        float: none;
+        width: 80%;
+        height: 80%;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        top: 10%;
+        left: 10%;
+    }
+    #logo img{
+        width: 100%;
+        height: 100%;
+    }
+    /*navigation*/
+
+    #topanchor { /*redisposition de l'ancre pour les boutons*/
+        top: -1000px;
+    }
+
+    .navbutton {/* mise en forme des boutons*/
+        display: block;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-color: transparent;
+        background-color: rgba(0,0,0,0.2);
+        position: absolute;
+        right: 50px;
+        z-index: 52;
+    }
+
+    #acceuiltoservices, #servicestoportfolio, #portfoliotocontact, #contacttoportfolio { /*placement des boutons de nav*/
+        bottom: 50px;
+    }
+
+    #servicestoacceuil, #portfoliotoservices {
+        bottom: 180px;
+    }
+
+    /***Acceuil***/
+
+    #one, #two, #dot1, #dot2 { /*planquage du caroussel*/
+        display: none;
+    }
+    #acceuil{
+        width: 100%;
+        height: 90%;
+        padding-top: 174px;
+        margin: 0;
+    }
+    #surslider { /* redisposition ecrits*/
+        top: 1%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        font-size: 4em;
+        text-align: center;
+        background-image: url('webagency_images/images/slider/bg1.jpg');
+        background-color: floralwhite;
+        background-repeat: no-repeat;
+        background-position: 60% 0;
+        background-size: cover;
+    }
+    #surslider h1 strong{
+        text-shadow: 0 0 4px white;
+    }
+    #surslider > p {
+        display: block;
+        position: absolute;
+        left: 5%;
+        top: 18%;
+        width: 65%;
+        font-size: 1em;
+    }
+    #boutonacceuil{/*positionnement du bouton dans l'acceuil*/
+        position: absolute;
+        bottom: 30%;
+        left: 40%;
+    }
+    #boutonacceuil a{/*mise en forme du bouton dans l'acceuil*/
+        width: 250px;
+        height: 150px;
+        border-radius: 50%;
+    }
+    #boutonacceuil a p{
+        position: absolute;
+        top: 30%;
+        left: 11%;
+    }
+
+    
+
+
+
+    /***Services***/
+    #services{
+        width: 100%;
+        height: 90%;
+        padding-top: 174px;
+    }
+    
+    /*replacement divers et mise en forme*/   
+
+
+
+    /***Portfolio***/
+    #portfolio{
+        width: 100%;
+        height: 90%;
+        padding-top: 174px;
+    }
+
+    /*rangement divers*/
+    /*mise en forme des projets*/
+
+
+
+    /***Contact***/
+
+    /*suppression des background*/
+    /*mise en forme du formulaire et de son parent*/
 }
-@media screen and (min-width: 681px) and (max-width: 720px){
+
+
+@media screen and (min-width: 651px) and (max-width: 720px){
     #nosservices h2, #div1portfolio h2 {
         padding-top: 35px;
     }
@@ -635,10 +774,6 @@ form textarea{
         right: 10%;
     }
 
-    #portfolio {
-        padding-top: 0;
-        height: auto;
-    }
 
     #div1portfolio {
         padding-top: 70px;
