@@ -629,7 +629,7 @@ form textarea{
     }
     /*navigation*/
 
-    #topanchor { /*redisposition de l'ancre pour les boutons*/
+    #topanchor { /*redisposition de l'ancre d'acceuil */
         top: -1000px;
     }
 
@@ -645,11 +645,11 @@ form textarea{
         z-index: 52;
     }
 
-    #acceuiltoservices, #servicestoportfolio, #portfoliotocontact, #contacttoportfolio { /*placement des boutons de nav*/
+    #acceuiltoservices, #servicestoportfolio, #portfoliotocontact { /*placement des boutons de nav*/
         bottom: 50px;
     }
 
-    #servicestoacceuil, #portfoliotoservices {
+    #servicestoacceuil, #portfoliotoservices, #contacttoportfolio { /*placement des boutons de nav*/
         bottom: 180px;
     }
 
@@ -664,7 +664,7 @@ form textarea{
         padding-top: 174px;
         margin: 0;
     }
-    #surslider { /* redisposition ecrits*/
+    #surslider { /* redisposition ecrits page d'acceuil*/
         top: 1%;
         left: 0;
         width: 100%;
@@ -677,10 +677,13 @@ form textarea{
         background-position: 60% 0;
         background-size: cover;
     }
-    #surslider h1 strong{
+    #surslider h1{
+        padding-top: 45px;
+    }
+    #surslider h1 strong{/*visibilitée du titre*/
         text-shadow: 0 0 4px white;
     }
-    #surslider > p {
+    #surslider > p {/* mise en forme ecrits dans l'acceuil*/
         display: block;
         position: absolute;
         left: 5%;
@@ -698,7 +701,8 @@ form textarea{
         height: 150px;
         border-radius: 50%;
     }
-    #boutonacceuil a p{
+    #boutonacceuil a p{/*mise en forme/positionnement ecrits dans le bouton*/
+        text-shadow: 0 0 2px grey;
         position: absolute;
         top: 30%;
         left: 11%;
@@ -714,7 +718,46 @@ form textarea{
         height: 90%;
         padding-top: 174px;
     }
-    
+    #nosservices h2{
+        font-size: 4em;
+    }
+    #nosservices p{
+        font-size: 2em;
+    }
+    #nosservices2 { /* replacement des blocs */
+        display: flex;
+        flex-direction: column;
+        height: 80%;
+    }
+    #nosservices2imgecran {
+        width: 100%;
+        height: 50%;
+    }
+    #nosservices2imgecran img{
+        width: 100%;
+        height: 100%;
+    }
+    #nosservices2ecrits{
+        width: 100%;
+    }
+    .inservice2{
+        width: 85%;
+        height: 15%;
+        font-size: 2.2em;
+        padding-top: 0;
+    }
+    .dessininservice2{/*suppression du dessin a chauche des ecrits*/
+        display: none;
+    }
+    .desciptionservice p {
+        text-align: center;
+    }
+    .desciptionservice p strong {
+        text-shadow: 0 0 5px deepskyblue;
+        text-align: center;
+        padding-left: 30%;
+        width: 300px;
+    }
     /*replacement divers et mise en forme*/   
 
 
