@@ -33,11 +33,11 @@ h2{
     padding-bottom: 20px;
 }
 .tiretpointe p{
-    color: white;
-    color: rgba(0,0,0,0.0);
-    text-decoration-line: line-through;
-    text-decoration-color: rgba(200,200,200,0.5);
-    padding-bottom: 15px;
+    display: block;
+    width: 250px;
+    height: 10px;
+    border-bottom: 2px solid lightgrey;
+    margin: auto;
 }
 .tiretpointe div {
     position: absolute;
@@ -48,7 +48,7 @@ h2{
     border: 5px solid white;
     border-color: white;
     left:49.4%;
-    top: 10%;
+    top: 3%;
 }
 
 .navbutton {/*cache les boutons de nav pour mobile*/
@@ -58,7 +58,7 @@ h2{
 
 /******Header******/
 
-header{
+header{/* mise en place du menu*/
     width: 100%;
     height: 10%;
     min-height: 100px;
@@ -71,35 +71,14 @@ header{
     font-family: FontAwesome;
     font-size: 0.8em;
 }
-
-#boutonacceuil a {
-    display: inline-block;
-    position: relative;
-    top: 30px;
-    width: 125px;
-    height: 40px;
-    color: white;
-    text-decoration-line: none;
-    background-color: cornflowerblue;
-    font-size: 1.2em;
-    border-radius: 4px;
-    box-shadow: 0 4px blue;
-}
-#boutonacceuil a p{
-    position: relative;
-    top: 9px;
-    left: 10px;
-}
-
-
-#logo {
+#logo {/* positionnement du logo*/
     float: left;
     margin-left: 15%;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-nav{
+nav{/* 4 boutons a droite*/
     float: right;
     padding-right: 8%;
 
@@ -133,9 +112,6 @@ a:hover{
     position:relative;
     top: -100px;
 }
-#showmenu, #showmenu1{
-    display: none;
-}
 
 
 
@@ -152,12 +128,12 @@ background-color: white;
     
 }
 
-#i1, #i2{
+#i1, #i2 {/*cache le "radio" utilisé pour le slider*/
     display: none;
 }
 
 
-.slide_img {
+.slide_img {/* les slides, position absolute pour les superposer dans leurs bloc*/
     position: absolute;
     width: 100%;
     height: 84%;
@@ -171,7 +147,7 @@ background-color: white;
     box-shadow: 0 0 12px black;
 }
 
-.prev, .next {
+.prev, .next {/* boutons incluts dans le slide_img*/
     width: 56px;
     height: 56px;
     border-radius: 50%;
@@ -203,7 +179,7 @@ background-color: white;
 }
 
 
-#nav_slide {
+#nav_slide {/* les lignes colorées qui indiquent quelle image est affichée*/
     width: 100%;
     bottom: 30.5%;
     height: 10px;
@@ -225,16 +201,16 @@ background-color: white;
 }
 
 
-#i1:checked ~ #one, #i2:checked ~ #two {
+#i1:checked ~ #one, #i2:checked ~ #two {/* si checké augmente le z-index pour diplay l'image checkée*/
     z-index: 9;
 }
-.prev:hover, .next:hover{
+.prev:hover, .next:hover{/*deco des boutons slide_img*/
     transition:0.5s;
     background: deepskyblue;
     background: rgba(90,245,255,0.4);
 }
 
-#i1:checked ~ #nav_slide #dot1{
+#i1:checked ~ #nav_slide #dot1{/* si checké "illumine le "recantgle" correspondant*/
     background: deepskyblue;
     background: rgba(90,245,255,0.4);
     transition: 0.5s ease-in-out;
@@ -246,7 +222,7 @@ background-color: white;
     transition: 0.5s ease-in-out;
 }
 
-#dot1:hover{
+#dot1:hover{/*deco*/
     background: lightgrey;
     background: rgba(255,255,255,0.3);
     transition: 0.5s ease-in-out;
@@ -256,7 +232,7 @@ background-color: white;
     background: rgba(255,255,255,0.3);
     transition: 0.5s ease-in-out;
 }
-#surslider{
+#surslider{/* bloc posé sur le slider, WEBAGENCE: L'Agence....*/
     position: relative;
     top: 160px;
     left: 200px;
@@ -273,6 +249,25 @@ background-color: white;
     font-size: 0.5em;
     justify-content:flex-start;
 }
+#boutonacceuil a {/* bouton dans le surslider*/
+    display: inline-block;
+    position: relative;
+    top: 30px;
+    width: 125px;
+    height: 40px;
+    color: white;
+    text-decoration-line: none;
+    background-color: cornflowerblue;
+    font-size: 1.2em;
+    border-radius: 4px;
+    box-shadow: 0 4px blue;
+}
+
+#boutonacceuil a p {
+    position: relative;
+    top: 9px;
+    left: 10px;
+}
 
 
 /******Services******/
@@ -287,7 +282,7 @@ background-color: white;
     position: relative;
 }
 
-#nosservices {
+#nosservices { /* bloc du haut*/
     margin: auto;
     margin-top: 0;
     width: 100%;
@@ -296,25 +291,25 @@ background-color: white;
 }
 
 
-#nosservices h2,#nosservices p {
+#nosservices h2,#nosservices > p {
     justify-content: center;
     text-align: center;
     padding-bottom: 10px;
     margin: 0;
 }
 
-#nosservices2{
+#nosservices2{/*bloc bas pere de 2div, celui avec l'image posé a gauche, celui avec les ecrits a droite*/
     display: flex;
     justify-content: space-around;
 }
-
-.inservice2{
+/* le div avec les ecrit est pere de 3div*/
+.inservice2{/*ses 3 derniers sont disposés avec un flex*/
     display: flex;
     width: 80%;
     height: 90px;
     padding-top: 20px;
 }
-.inservice2 .desciptionservice{
+.inservice2 .desciptionservice{/*puis sont rangés de facon a ressembler a la maquette*/
     width:80%;
     text-align:left;
     background: none;
@@ -324,7 +319,8 @@ background-color: white;
     text-align: left;
     justify-content: inherit;
 }
-.inservice2 div {
+
+.inservice2 div {/* petitess images a gauche des ecrits*/
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -354,8 +350,6 @@ background-color: white;
 }
 
 
-
-
 /******Portfolio******/
 
 #portfolio{
@@ -365,11 +359,8 @@ background-color: white;
     position: relative;
 }
 
-#portfolio input{
-    display: none;
-}
 
-#div1portfolio{
+#div1portfolio{/* disposition haut de page*/
     position:relative;
 }
 #div1portfolio h2,p,img{
@@ -381,7 +372,17 @@ background-color: white;
     
 }
 
-.menuportfolio {
+#portfolio input { /*planquage du "radio" qui sert au menu*/
+    display: none;
+}
+
+#marginauto {/*conteneur du menu*/
+    margin: auto;
+    height: 50px;
+    width: 400px;
+    padding-top: 20px;
+}
+.menuportfolio {/*boutons du menu*/
     transition: 0.5s;
     margin: auto;
     width: 100px;
@@ -392,20 +393,13 @@ background-color: white;
     color: white;
     text-align:center;
     padding-top: 7px;
-    justify-content: center;
 }
-#marginauto{
-    margin: auto;
-    height: 50px;
-    width: 400px;
-    padding-top: 20px;
-}
-.menuportfolio span{
+.menuportfolio span{/* ecrit et petite fleche du bouton*/
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.menuportfolio i{
+.menuportfolio i{/*petite fleche du bouton*/
     transition: 0.5s;
     position: relative;
     bottom: -4px;
@@ -429,12 +423,16 @@ background-color: white;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
 }
-#label4{
+#label4{/*fin de decoration des boutons*/
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
 }
+#p2:checked ~ #div2portfolio, #p4:checked ~ #div2portfolio {/* change l'ordre d'affichage en fonction du bouton du menu qui est checké*/
+    flex-direction: row-reverse;
+}
 
-#div2portfolio{
+
+#div2portfolio{/*Bloc contenant les images de projets*/
     padding-top: 30px;
     display: flex;
     flex-wrap: wrap;
@@ -446,18 +444,19 @@ background-color: white;
     padding-bottom: 100px;
 }
 
-div article img{
-    width: 100%;
-    height: 100%;
-}
-.flexportfolio{
+.flexportfolio{/*mini blocs contenant 1 projet*/
     width:21%;
     min-width:250px;
     height: 21%;
     min-height:150px;
     position: relative;
 }
-.banniereportfolio{
+.flexportfolio img {
+    width: 100%;
+    height: 100%;
+}
+
+.banniereportfolio{/*Ce qui s'affiche lors du survol des projets*/
     width: 100%;
     height: 30%;
     background-color: white;
@@ -471,7 +470,7 @@ div article img{
     text-align: left;
     padding-left: -30px;
 }
-.boutonportfolio{
+.boutonportfolio{/* petit bouton avec l'oeuil*/
     width: 50px;
     height: 50px;
     position: absolute;
@@ -510,12 +509,10 @@ div article img{
     color: white;
     visibility:visible;
 }
-#p2:checked ~ #div2portfolio, #p4:checked ~ #div2portfolio {
-    flex-direction: row-reverse;
-}
-.ecritportfolio {
+.ecritportfolio {/* fin de la deco des bannieres*/
     float: left;
     padding-left: 20px;
+    padding-top: 1%;
 }
 
 
@@ -531,7 +528,7 @@ div article img{
     position: relative;
     overflow: hidden;
 }
-#filtrebleu{
+#filtrebleu{/* bloc avec un fond bleu semi transparant pour ajouter un filtre bleu et se raprocher de la maquette*/
     position: absolute;
     left: 0;
     width: 100%;
@@ -541,7 +538,7 @@ div article img{
     z-index: 31;
 }
 
-#contact iframe{
+#contact iframe{/* la map*/
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -549,11 +546,8 @@ div article img{
     margin:0;
     z-index: 30;
 }
-#mettretiret {
-    margin-bottom: 20px;
-    border-bottom: 1px dashed grey;
-}
-#div1contact{
+
+#div1contact{/* bloc blanc survolant la map et contenant le formulaire*/
     width: 350px;
     height: 60%;
     min-height: 480px;
@@ -566,7 +560,7 @@ div article img{
     right: 25%;  
     z-index: 32;
 }
-#div1contact h2{
+#div1contact h2{/*disposition des ecrits*/
     margin-left: 18px;
     font-size: 1.8em;
     margin-top: 18px;
@@ -577,8 +571,12 @@ div article img{
     clear: left;
     margin-left: 18px;
 }
+#mettretiret {/*pour mettre un tiret sous: Tel: */
+    margin-bottom: 20px;
+    border-bottom: 1px dashed grey;
+}
 
-form input, form textarea {
+form input, form textarea {/* mise en forme du formulaire*/
     margin-left: 5%;
     margin-bottom: 15px;
     width: 90%;
@@ -592,7 +590,7 @@ form input{
 form textarea{
     height: 30%;
 }
-#submit{
+#submit{/* mise en forme du bouton envoyer du formulaire*/
     width: 38%;
     height: 8%;
     background-color: deepskyblue;
@@ -878,8 +876,13 @@ form textarea{
 }
 
 
-@media screen and (max-device-height: 420px) {/* pour les device en mode portrait*/
+@media only screen and (max-device-height: 420px) {/* pour les device en mode portrait*/
 
+    #acceuil #suslider{
+        position: relative;
+        top: 10%;
+    }
+    
     #portfolio{
         width: 100%;
         height: 90%;
@@ -887,6 +890,8 @@ form textarea{
         padding-top: 10%;
 
     }
+
+
 
     #div1contact{
         width: 80%;
