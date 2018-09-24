@@ -1,12 +1,3 @@
-@font-face {
-    font-family: 'FontAwesome';
-    src: url('..\DWJ-Projet1\webagency_images\fonts\fontawesome-webfont.eot') format('embedded-opentype'), 
-         url('..\DWJ-Projet1\webagency_images\fonts\fontawesome-webfont.woff') format('woff'), 
-         url('..\DWJ-Projet1\webagency_images\fonts\fontawesome-webfont.ttf') format('truetype'), 
-         url('..\DWJ-Projet1\webagency_images\fonts\fontawesome-webfont.svg') format('svg'),
-         url('..\DWJ-Projet1\webagency_images\fonts\fontawesome-webfont.otf') format('opentype');
-}
-
 
 * {
     padding: 0 0;
@@ -530,12 +521,16 @@ background-color: white;
     position: relative;
     overflow: hidden;
 }
+iframe{
+    border: 0;
+}
 #filtrebleu{/* bloc avec un fond bleu semi transparant pour ajouter un filtre bleu et se raprocher de la maquette*/
     position: absolute;
     left: 0;
     width: 100%;
     height: 88%;
     background-color: transparent;
+    background-color: white;
     background-color: rgba(0,130,205,0.1);
     z-index: 31;
 }
@@ -637,7 +632,7 @@ form textarea{
         width: 160px;
         height: 160px;
         border-radius: 50%;
-        background-color: transparent;
+        background-color: white;
         background-color: rgba(0,0,0,0.2);
         position: absolute;
         right: 50px;
@@ -784,7 +779,7 @@ form textarea{
 
     }
     #div1portfolio{
-        padding-top: 0px;
+        padding-top: 0;
     }
     #div1portfolio h2{
         font-size: 4em;
@@ -1034,7 +1029,6 @@ form textarea{
         padding-top: 20px;
     }
     .menuportfolio i { /* petite fleche sous le menu*/
-        font-size: 40px;
         top: 18px;
         font-size: 60px;
     }
@@ -1055,7 +1049,7 @@ form textarea{
 
     /***Contact***/
     #contact{
-        padding-top: 0px;
+        padding-top: 0;
     }
     #filtrebleu{
         height: 100%;
