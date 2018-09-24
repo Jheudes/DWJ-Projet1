@@ -158,6 +158,7 @@ background-color: white;
     z-index: 99;
     cursor: pointer;
     text-align: center;
+    font-size: 24px;
 }
 .next {
     right: -28px;
@@ -404,12 +405,13 @@ background-color: white;
     position: relative;
     bottom: -4px;
     color: transparent;
+    font-size: 24px;
 }
 .menuportfolio:hover i{
     transition: 0.5s;
     color: cornflowerblue;
 }
-.menuportfolio:hover, #p1:checked ~ #label1{
+.menuportfolio:hover{
     transition: 0.5s;
     height: 30px;
     background-color: deepskyblue;
@@ -556,7 +558,7 @@ background-color: white;
     background-color: rgba(255,255,255,0.7);
     border-radius: 4px;
     position: absolute;
-    top: 30%;
+    top: 31%;
     right: 25%;  
     z-index: 32;
 }
@@ -938,5 +940,195 @@ form textarea{
     #filtrebleu{
         top: 98px;
     }
+
+}
+/****Grands Ecrans*****/
+@media screen and (min-width: 2200px) and (max-height: 3000px){
+    #main_wrapper{/*a   grandissement de l'ecriture sur tout la page*/
+        font-size: 2em;
+    }
+
+    /***Header***/
+    #logo img{ /* agrandissement du logo*/
+        width: 450px;
+
+    }
+    #inmenuheader li{/*agrandissement des boutons dans le header*/
+        width: 150px;
+    }
+    #inmenuheader li a{
+        padding-top: 75px;
+    }
+
+    /***Acceuil***/
+    .prev, .next {/* boutons du slider*/
+        width: 112px;
+        height: 112px;
+    }
+    .prev{
+        left: -56px;
+    }
+    .next{
+        right: -56px;
+    }
+    .next i, .prev i{
+        top: 30px;
+        font-size: 48px;
+    }
+    .next i{
+        right: 45px;
+    }
+    .prev i{/* fin bouton slider*/
+        left: 45px;
+    }
+    .dots{/*rehaussage des barres de navigation en bas du slider*/
+        top: -7px;
+    }
+
+    #surslider{/* ++ zone survolant le slider*/
+        width: 1200px;
+        height: 600px;
+    }
+    #boutonacceuil a {/* bouton plus d'infos*/
+        width: 225px;
+        height: 70px;
+        border-radius: 12px;
+        top: 60px;
+        box-shadow: 0 8px blue;
+    }
+    
+    /***Services***/
+    #nosservices2{/* agrandissement des blocs*/
+        width: 100%;
+        margin: auto;
+        height: 42%;
+    }
+    #nosservices2imgecran, #nosservices2ecrits {
+        width: 50%;
+        height: 100%;
+    }
+    #nosservices2imgecran img{
+        width: 100%;
+        padding-left: 0;
+    }
+    .inservice2 {
+        height: 30%;
+        padding-top: 60px;
+    }
+
+    /***Portfolio***/
+
+    #marginauto {/* conteneur du menu*/
+        width: 1000px;
+        height: 120px;
+    }
+    .menuportfolio{/* boutons du menu*/
+        width: 250px;
+        height: 100px;
+    }
+    .menuportfolio:hover{
+        height: 93px;
+        box-shadow: 0 7px 0 cornflowerblue;
+    }
+    .menuportfolio span {/* positionnement du texte dans le bouton*/
+        padding-top: 20px;
+    }
+    .menuportfolio i { /* petite fleche sous le menu*/
+        font-size: 40px;
+        top: 18px;
+        font-size: 60px;
+    }
+    #label1, #label2, #label3, #label4 {/* labels du menu*/
+        margin-left: -5px;
+        margin-right: -5px;
+    }
+    #div2portfolio {/*conteneur des projets*/
+        min-height: 750px;
+    }
+    .boutonportfolio {/* le bouton dans les projets*/
+        width: 100px;
+        height: 100px;
+    }
+    .boutonportfolio i{/*Oeil du bouton*/
+        font-size: 48px;
+    }
+
+    /***Contact***/
+    #contact{
+        padding-top: 0px;
+    }
+    #filtrebleu{
+        height: 100%;
+    }
+    #div1contact{/* encart avec le formulaire*/
+        width: 27%;
+        right: 15%;
+    }
+    form input, form textarea{
+        font-size: 100%;
+    }
+
+
+}
+
+/****Grands Ecrans*****/
+@media screen and (min-width: 3001px) and (max-height: 4100px){
+    #main_wrapper{/*a   grandissement de l'ecriture sur tout la page*/
+        font-size: 2.7em;
+    }
+
+    /***Header***/
+    #logo img{ /* agrandissement du logo*/
+        width: 800px;
+
+    }
+    #inmenuheader li{/*agrandissement des boutons dans le header*/
+        width: 200px;
+    }
+    #inmenuheader li a{
+        padding-top: 100px;
+    }
+
+    /***Acceuil***/
+    .prev, .next {/* boutons du slider*/
+        width: 150px;
+        height: 150px;
+    }
+    .prev{
+        left: -75px;
+    }
+    .next{
+        right: -75px;
+    }
+    .next i, .prev i{
+        top: 40px;
+        font-size: 60px;
+    }
+    .next i{
+        right: 50px;
+    }
+    .prev i{/* fin bouton slider*/
+        left: 50px;
+    }
+    .dots{/*rehaussage des barres de navigation en bas du slider*/
+        top: -5px;
+    }
+
+    #surslider{/* ++ zone survolant le slider*/
+        top: 16%;
+        width: 1700px;
+        height: 750px;
+    }
+    #boutonacceuil a {/* bouton plus d'infos*/
+        width: 300px;
+        height: 80px;
+        border-radius: 15px;
+    }
+    
+    /***Contact***/
+    #div1contact{/* encart avec le formulaire*/
+        top: 20%;
+    }
+
 
 }
