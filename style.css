@@ -878,17 +878,28 @@ form textarea{
 
 @media only screen and (max-device-height: 420px) {/* pour les device en mode portrait*/
 
-    #acceuil #suslider{
-        position: relative;
+    #surslider{
         top: 10%;
+        left: 10%;
     }
     
     #portfolio{
-        width: 100%;
-        height: 90%;
+        width: auto;
+        height: auto;
         padding-bottom: 4%;
         padding-top: 10%;
 
+    }
+    #div2portfolio{
+        flex-direction: column;
+        height: 1000px;
+        min-height: inherit;
+        padding-bottom: inherit;
+        padding-top: 0;
+    }
+    .flexportfolio{
+        width: 45%;
+        height: 250px;
     }
 
 
@@ -925,7 +936,7 @@ form textarea{
         height: 10%;
     }
     #filtrebleu{
-        top: 15%;
+        top: 98px;
     }
 
 }
