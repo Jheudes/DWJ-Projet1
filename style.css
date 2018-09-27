@@ -768,13 +768,10 @@ form textarea{/* mise en forme du textarea*/
         padding-top: 22%;
 
     }
-    #div1portfolio{
-        padding-top: 0;
-    }
-    #div1portfolio h2{
+    #div1portfolio h2{/*NOS PROJETS */
         font-size: 4em;
     }
-    #div1portfolio p{
+    #div1portfolio p{/*Voici une petit selection....*/
         font-size: 2em;
     }
     #marginauto{/*mise en forme des boutons du menu*/
@@ -788,40 +785,40 @@ form textarea{/* mise en forme du textarea*/
         width: 25%;
         height: 90%;
     }
-    #marginauto i{
+    #marginauto i{/*ne pas aficher la fleche du menu sur les mobiles*/
         display: none;
     }
-    #marginauto span{
+    #marginauto span{/*conteneur des ecriture du menu*/
         font-size: 2.3em;
         margin-top: 5%;
     }
-    #div2portfolio{
+    #div2portfolio{/* conteneur des projets*/
         height: 80%;
     }
-    .flexportfolio{
+    .flexportfolio{/*projets*/
         width: 45%;
         height: 20%;
     }
-    .boutonportfolio{
+    .boutonportfolio{/*Bouton sur les projets*/
         width: 150px;
         height: 100px;
     }
-    .boutonportfolio i{
+    .boutonportfolio i{/* oeil du bouton sur les projets*/
         font-size: 100px;
         padding-top: 0;
     }
-    #projetportfolio8 .boutonportfolio, #projetportfolio7 .boutonportfolio {
+    #projetportfolio8 .boutonportfolio, #projetportfolio7 .boutonportfolio {/*mise des boutons a gauche 
+                                                                        pour que cela ne se superpose pas avec les boutons de navigation*/
         right: unset;
         left: 10%;
     }
-    .ecritportfolio{
+    #projetportfolio8 .ecritportfolio, #projetportfolio7 .ecritportfolio {/* mise de lecriture a droite pour les deux dernier projets*/
+        float: right;
+    }
+    .ecritportfolio{/* conteneur des ecrits dans les projets*/
         width: 50%;
     }
-    #projetportfolio8 .ecritportfolio ,#projetportfolio7 .ecritportfolio{
-        float: right;
-
-    }
-    .flexportfolio h3, .flexportfolio p {
+    .flexportfolio h3, .flexportfolio p {/* mise en forme des ecrits dans les projets*/
         width: 100%;
         float: inherit;
         clear: both;
@@ -836,41 +833,41 @@ form textarea{/* mise en forme du textarea*/
     iframe, #filtrebleu{/* netoyage du background*/
         display: none;
     }
-    #contact{
+    #contact{/*mise en forme de la page contact*/
         width: 100%;
         height: 90%;
         
     }
-    #div1contact{
+    #div1contact{/*mise en avant du formulaire*/
         width: 100%;
         height: 100%;
         position: initial;
         border: none;
     }
         /*taille/placement des ecrits*/
-    #div1contact h2, #div1contact p{
+    #div1contact h2, #div1contact p{/*mise en forme et positionement des textes*/
         padding-left: 3%;
         font-size: 4em;
     }
-    #div1contact h2{
+    #div1contact h2{/*mise en forme et positionement des textes*/
         font-size: 5em;
         padding-bottom: 3%;
     }
-    #div1contact input, #div1contact textarea{
+    #div1contact input, #div1contact textarea{ /*ajustement des inputs*/
         font-size: 300%;
         border-color: slategrey;
     }
 }
 
+/*** pour les device en mode paysage***/
+@media only screen and (max-device-height: 421px) {
 
-@media only screen and (max-device-height: 421px) {/* pour les device en mode paysage*/
-
-    #surslider{
+    #surslider{/*positionement du bloc contenant les ecrit dans l'acceuil*/
         top: 10%;
         left: 10%;
     }
     
-    #portfolio{
+    #portfolio{/*mise en forme de la page portfolio*/
         width: auto;
         height: auto;
         padding-bottom: 4%;
