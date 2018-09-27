@@ -1,14 +1,13 @@
-
-* {
+* {/*bases de la page*/
     padding: 0 0;
     margin: 0 0;
     font-family: 'Roboto', sans-serif;
 }
-html, body, #main_wrapper {
+html, body, #main_wrapper {/*permet de commencer sur une base stable*/
     width: 100%;
     height: 100%;
 }
-h2{
+h2{/* gros tites NOS SERVICES, NOS PROJETS et Contact Info*/
     font-weight: 700;
     font-size:3em;
 }
@@ -16,20 +15,21 @@ h2{
 
 
 /******item replacables******/
-.tiretpointe {
+/*la ligne avec un point au millieu. sous NOS PROJET et NOS SERVICES*/
+.tiretpointe {/* bloc contenant la ligne et le point*/
     width: 100%;
     height: 20px;
     position: relative;
     padding-bottom: 20px;
 }
-.tiretpointe p{
+.tiretpointe p{/* a l'origine je voulais y mettre du texte transparant mais j'ai finit par opter pour une border-bottom*/
     display: block;
     width: 250px;
     height: 10px;
     border-bottom: 2px solid lightgrey;
     margin: auto;
 }
-.tiretpointe div {
+.tiretpointe div {/* mise en forme et placement du point*/
     position: absolute;
     width: 10px;
     height: 10px;
@@ -41,7 +41,7 @@ h2{
     top: 3%;
 }
 
-.navbutton {/*cache les boutons de nav pour mobile*/
+.navbutton {/*cache les boutons de nav pour mobile. Petits boutons ronds serant a la navigation*/
     display: none;
 }
 
@@ -79,11 +79,11 @@ ul{/*disposition des boutons*/
     display: flex;
 }
 
-li {
+li {/* contenant des lien pour la redirection et surtout de Acceuil/Services/Portfolio et Contact*/
     width: 80px;
 }
 
-li a{
+li a{/*mise en forme et place des ecrits des boutons*/
     text-decoration: none;
     color: grey;
     display: block;
@@ -93,12 +93,12 @@ li a{
     font-weight: bolder;
 }
 
-a:hover{
+a:hover{/* lors du survol du bouton ajoute une bordure bleu au dessus du bloc. change la couleur d'ecriture en noir*/
     color:black;
     border-top: 3px solid deepskyblue;
 }
 
-#topanchor{
+#topanchor{/*ancre qui sert a diriger vers le haut de page. est utilisée dans tout lien devant pointer vers l'acceuil*/
     position: absolute;
     top: -100px;
 }
@@ -107,8 +107,8 @@ a:hover{
 
 /******Acceuil******/
 
-#acceuil {
-    margin-top: 6.5%;
+#acceuil {/* mise en forme de l'acceuil*/
+    margin-top: 6.5%;/*pour que mon slider ne soit pas planqué sous le menu*/
     width: 100%;
     height: 100%;
     
@@ -127,13 +127,13 @@ a:hover{
     overflow: hidden;
 }
 
-.slide_img img {
+.slide_img img {/*corrige la taille des images du slider*/
     width: inherit;
     height: inherit;
     box-shadow: 0 0 12px black;
 }
 
-.prev, .next {/* boutons incluts dans le slide_img*/
+.prev, .next {/*mise en forme et placement des boutons incluts dans le slide_img*/
     width: 56px;
     height: 56px;
     border-radius: 50%;
@@ -145,19 +145,19 @@ a:hover{
     cursor: pointer;
     font-size: 24px;
 }
-.next {
+.next {/*bouton de droite*/
     right: -28px;
 }
-.next i{
+.next i{/*placement de la petite fleche du bouton de droite*/
     position: absolute;
     top: 16px;
     left: 12px;
     color: white;
 }
-.prev {
+.prev {/* bouton de gauche*/
     left: -28px;
 }
-.prev i{
+.prev i{/*placement de la petite fleche du bouton de gauche*/
     position: absolute;
     top: 16px;
     right: 12px;
@@ -174,7 +174,7 @@ a:hover{
     z-index: 99;
     cursor: default;
 }
-.dots {
+.dots {/*mise en forme et placement des deux boutons de navigation en bas du slider*/
     bottom: 0;
     width: 49%;
     height: 5px;
@@ -202,23 +202,23 @@ a:hover{
     transition: 0.5s ease-in-out;
 }
 
-#i2:checked ~ #nav_slide #dot2{
+#i2:checked ~ #nav_slide #dot2 { /* si checké "illumine le "recantgle" correspondant*/
     background: deepskyblue;
     background: rgba(90,245,255,0.4);
     transition: 0.5s ease-in-out;
 }
 
-#dot1:hover{/*deco*/
+#dot1:hover{/*illumine le rectangle survolé*/
     background: lightgrey;
     background: rgba(255,255,255,0.3);
     transition: 0.5s ease-in-out;
 }
-#dot2:hover{
+#dot2:hover { /*illumine le rectangle survolé*/
     background: lightgrey;
     background: rgba(255,255,255,0.3);
     transition: 0.5s ease-in-out;
 }
-#surslider{/* bloc posé sur le slider, WEBAGENCE: L'Agence....*/
+#surslider{/*positionement et mise en forme du bloc posé sur le slider, WEBAGENCY: L'Agence....*/
     position: relative;
     top: 160px;
     left: 200px;
@@ -228,10 +228,10 @@ a:hover{
     color: white;
     font-size: 2em;
 }
-#surslider h1 strong{
+#surslider h1 strong{/* Met WEBAGENCY en bleu*/
     color: cornflowerblue;
 }
-#surslider p{
+#surslider p{/* definit la taille et le positionnement du petit texte*/
     font-size: 0.5em;
     justify-content:flex-start;
 }
@@ -249,7 +249,7 @@ a:hover{
     box-shadow: 0 4px blue;
 }
 
-#boutonacceuil a p {
+#boutonacceuil a p {/*placement de l'ecriture dans le bouton*/
     position: relative;
     top: 9px;
     left: 10px;
@@ -258,7 +258,7 @@ a:hover{
 
 /******Services******/
 
-#services{
+#services{/* mise en place du corp services*/
     padding-top: 80px;
     padding-top: 10%;
     width: 100%;
@@ -277,7 +277,7 @@ a:hover{
 }
 
 
-#nosservices h2,#nosservices > p {
+#nosservices h2,#nosservices > p {/*rangement des ecrits*/
     justify-content: center;
     text-align: center;
     padding-bottom: 10px;
@@ -301,7 +301,7 @@ a:hover{
     background: none;
     border: none;
 }
-.desciptionservice p{
+.desciptionservice p{/* rangement des ecrits uxdesign, ui design et seo */ 
     text-align: left;
     justify-content: inherit;
 }
@@ -317,13 +317,13 @@ a:hover{
     margin-right: 30px;
     overflow: visible;
 }
-.inservice2 div i{
+.inservice2 div i{/* "images" a gauche de ux ui design et seo*/
     position: absolute;
     top:25%;
     left:26%;
     color: deepskyblue;
 }
-.inservice2 div div{
+.inservice2 div div{/* bloc qui sert a faire les bordures des "images*/
     position: absolute;
     width: 10px;
     height: 10px;
@@ -338,7 +338,7 @@ a:hover{
 
 /******Portfolio******/
 
-#portfolio{
+#portfolio{/*mise en place du corp de la page portfolio*/
     padding-top: 10%;
     background-color: whitesmoke;
     width: 100%;
@@ -350,7 +350,7 @@ a:hover{
 #div1portfolio{/* disposition haut de page*/
     position:relative;
 }
-#div1portfolio h2,p,img{
+#div1portfolio h2, p ,img{/* ecrit en haut de page*/
     margin: 0;
     padding: 0;
     text-align: center;
@@ -393,25 +393,25 @@ a:hover{
     color: transparent;
     font-size: 24px;
 }
-.menuportfolio:hover i{
+.menuportfolio:hover i{/* apparition d'une fleche lors du survol du menu*/
     transition: 0.5s;
     color: cornflowerblue;
 }
-.menuportfolio:hover{
+.menuportfolio:hover{/*changement de couleur lors du survol*/
     transition: 0.5s;
     height: 30px;
     background-color: deepskyblue;
     box-shadow: 0 3px 0 cornflowerblue;
 }
-#label1, #label2, #label3, #label4{
+#label1, #label2, #label3, #label4{/*sert a resserer un petit peut le menu*/
     margin-left: -2px;
     margin-right: -2px;
 }
-#label1{
+#label1{/*ajoute un leger arondi au bouton de gauche*/
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
 }
-#label4{/*fin de decoration des boutons*/
+#label4{/*ajoute un leger arondi au bouton de droite*/
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
 }
@@ -439,7 +439,7 @@ a:hover{
     min-height:150px;
     position: relative;
 }
-.flexportfolio img {
+.flexportfolio img {/*fixe la taille des image a la taille du bloc*/
     width: 100%;
     height: 100%;
 }
@@ -454,9 +454,8 @@ a:hover{
     color: white;
     color: rgba(0,0,0,0.0);
 }
-.banniereportfolio p{
+.banniereportfolio p{/* ecrit affichés lors du survol des projets*/
     text-align: left;
-    padding-left: -30px;
 }
 .boutonportfolio{/* petit bouton avec l'oeuil*/
     width: 50px;
@@ -468,36 +467,34 @@ a:hover{
     background-color: black;
     background-color: rgba(0,0,0,0.0);
 }
-.boutonportfolio i {
+.boutonportfolio i {/* placement du petit oeil */
     visibility: hidden;
     display: flex;
     justify-content: center;
     padding-top: 25%;
-    background-color: black;
-    background-color: rgba(0,0,0,0.0);
     font-size: 24px;
     }
-.flexportfolio:hover > div{
+.flexportfolio:hover > div{/* affiche la banniere lors du survol*/
     transition: 0.4s;
     background-color: black;
     background-color: rgba(0,0,0,0.3);
     color: white;
 }
-.flexportfolio:hover a{
+.flexportfolio:hover a{/* lors du survol des projets affiche un petit encart sombre*/
     text-decoration-line: none;
     background-color: black;
     background-color: rgba(0,0,0,0.5);
 }
-.flexportfolio:hover .boutonportfolio {
+.flexportfolio:hover .boutonportfolio {/* lors du survol des projets affiche le rond bleu*/
     background-color: black;
     background-color: rgba(90,200,240,1);
     border: 2px solid white;
 }
-.flexportfolio:hover .boutonportfolio i{
+.flexportfolio:hover .boutonportfolio i{/* lors du survol des projets affiche le petit oeil*/
     color: white;
     visibility:visible;
 }
-.ecritportfolio {/* fin de la deco des bannieres*/
+.ecritportfolio {/* gere le texte affiché dans la benniere*/
     float: left;
     padding-left: 20px;
     padding-top: 1%;
@@ -507,7 +504,7 @@ a:hover{
 
 
      /******Contact******/
-#contact {
+#contact {/* mise en forme du corp*/
     width: 100%;
     height: 100%;
     padding-top: 10%;
@@ -516,7 +513,13 @@ a:hover{
     position: absolute;
     overflow: hidden;
 }
-iframe{
+#contact iframe{/* la map*/
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding:0;
+    margin:0;
+    z-index: 30;
     border: 0;
 }
 #filtrebleu{/* bloc avec un fond bleu semi transparant pour ajouter un filtre bleu et se raprocher de la maquette*/
@@ -529,16 +532,6 @@ iframe{
     background-color: rgba(0,130,205,0.1);
     z-index: 31;
 }
-
-#contact iframe{/* la map*/
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    padding:0;
-    margin:0;
-    z-index: 30;
-}
-
 #div1contact{/* bloc blanc survolant la map et contenant le formulaire*/
     width: 30%;
     height: 60%;
@@ -552,13 +545,13 @@ iframe{
     right: 25%;  
     z-index: 32;
 }
-#div1contact h2{/*disposition des ecrits*/
+#div1contact h2{/*disposition du titre dans l'encart blanc*/
     margin-left: 5%;
     font-size: 1.8em;
     margin-top: 18px;
     margin-bottom: 10px;
 }
-#div1contact p {
+#div1contact p {/* disposition des paragraphes dans l'encart blanc */
     float: left;
     clear: left;
     margin-left: 5%;
@@ -567,7 +560,7 @@ iframe{
     margin-bottom: 20px;
     border-bottom: 1px dashed grey;
 }
-form{
+form{/*definition de la taille du conteneur des input*/
     padding-top: 20px;
     height: 60%;
 }
@@ -580,10 +573,10 @@ form input, form textarea {/* mise en forme du formulaire*/
     color: lightgray;
     margin-top: 2%;
 }
-form input{
+form input{/*mise en forme des inputs*/
     height: 10%;
 }
-form textarea{
+form textarea{/* mise en forme du textarea*/
     height: 30%;
 }
 #submit{/* mise en forme du bouton envoyer du formulaire*/
@@ -616,7 +609,7 @@ form textarea{
         top: 10%;
         left: 10%;
     }
-    #logo img{
+    #logo img{/*taille du logo*/
         width: 100%;
         height: 100%;
     }
@@ -637,14 +630,14 @@ form textarea{
         color: grey;
         color: rgba(255,255,255,0.3);
     }
-    .navbutton i{
+    .navbutton i{/*disposition de la fleche dans les boutons de navigation*/
         position: absolute;
         left: 25px;
     }
-    #acceuiltoservices i, #servicestoportfolio i, #portfoliotocontact i{
+    #acceuiltoservices i, #servicestoportfolio i, #portfoliotocontact i { /*disposition de la fleche dans les boutons de navigation*/
         bottom: -20px;
     }
-    #servicestoacceuil i, #portfoliotoservices i, #contacttoportfolio i{
+    #servicestoacceuil i, #portfoliotoservices i, #contacttoportfolio i { /*disposition de la fleche dans les boutons de navigation*/
         bottom: 10px;
     }
     .navbutton:hover {
@@ -664,7 +657,7 @@ form textarea{
     #one, #two, #dot1, #dot2 { /*planquage du caroussel*/
         display: none;
     }
-    #acceuil{
+    #acceuil{/*mise en place de l'acceuil*/
         width: 100%;
         height: 90%;
         padding-top: 22%;
@@ -683,7 +676,7 @@ form textarea{
         background-position: 60% 0;
         background-size: cover;
     }
-    #surslider h1{
+    #surslider h1{/*Titre dans l'acceuil*/
         padding-top: 45px;
     }
     #surslider h1 strong{/*visibilitée du titre*/
@@ -719,15 +712,15 @@ form textarea{
 
 
     /***Services***/
-    #services{
+    #services{/* mise en place de la page Services*/
         width: 100%;
         height: 90%;
         padding-top: 22%;
     }
-    #nosservices h2{
+    #nosservices h2{/*NOS SERVICES*/
         font-size: 4em;
     }
-    #nosservices p{
+    #nosservices p{/*Chez Webagency nous proposons.....*/
         font-size: 2em;
     }
     #nosservices2 { /* replacement des blocs */
@@ -735,19 +728,19 @@ form textarea{
         flex-direction: column;
         height: 80%;
     }
-    #nosservices2imgecran {
+    #nosservices2imgecran {/*image d'ecran*/
         width: 100%;
         height: 50%;
     }
-    #nosservices2imgecran img{
+    #nosservices2imgecran img{/*mise en forme de l'image dans son bloc*/
         width: 100%;
         height: 100%;
     }
-    #nosservices2ecrits{
+    #nosservices2ecrits{/*bloc contenant les 3 blocs avec les ecrits*/
         width: 100%;
         height: 50%;
     }
-    .inservice2{
+    .inservice2{/*bloc contenant les ecrits*/
         width: 85%;
         height: 30%;
         font-size: 2.2em;
@@ -756,10 +749,10 @@ form textarea{
     .dessininservice2{/*suppression du dessin a chauche des ecrits*/
         display: none;
     }
-    .desciptionservice p {
+    .desciptionservice p {/* paragraphes sous UX design, UI design et SEO*/
         text-align: center;
     }
-    .desciptionservice p strong {
+    .desciptionservice p strong {/* titres UX DESIGN, UI DESIGN et SEO*/
         text-shadow: 0 0 5px deepskyblue;
         text-align: center;
         padding-left: 30%;
@@ -870,7 +863,7 @@ form textarea{
 }
 
 
-@media only screen and (max-device-height: 420px) {/* pour les device en mode paysage*/
+@media only screen and (max-device-height: 421px) {/* pour les device en mode paysage*/
 
     #surslider{
         top: 10%;
