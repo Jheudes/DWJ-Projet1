@@ -874,52 +874,54 @@ form textarea{/* mise en forme du textarea*/
         padding-top: 10%;
 
     }
-    #div2portfolio{
+    #div2portfolio{/* mise en place du conteneur des projets*/
         flex-direction: column;
         height: 1000px;
         min-height: inherit;
         padding-bottom: inherit;
         padding-top: 0;
     }
-    .flexportfolio{
+    .flexportfolio{/*Mise en forme des projets*/
         width: 45%;
         height: 250px;
     }
 
 
 
-    #div1contact{
+    #div1contact{/*encart blanc contact*/
         width: 80%;
         height: 55%;
         min-height: unset;
         top: 40%;
         right: 10%;
     }
-    #div1contact h2{
+    #div1contact h2{/* n'affiche pas contact infos*/
         display: none;
     }
-    #div1contact p{
+    #div1contact p{/* mise en place du texte*/
         float: left;
         font-size: 1.5em;
         width: 45%;
         padding-top: 5%
     }
-    #div1contact form{
+    #div1contact form{/*mise en place du conteneur des inputs*/
         width: 50%;
         height: 100%;
         position: absolute;
         right: 3%;
-        top: 6%;
+        top: 0%;
     }
 
-    #contact textarea{
+    #contact textarea{/*zone de texte du formulaire*/
         float: right;
+        height: 20%;
     }
-    #contact input{
+    #contact input{/* email, nom et sujet*/
+        margin-top: 0;
         float: right;
         height: 10%;
     }
-    #filtrebleu{
+    #filtrebleu{/*ce qui donne un couleure bleutée a la map*/
         top: 98px;
     }
 
@@ -947,21 +949,21 @@ form textarea{/* mise en forme du textarea*/
         width: 112px;
         height: 112px;
     }
-    .prev{
-        left: -56px;
-    }
-    .next{
-        right: -56px;
-    }
-    .next i, .prev i{
+    .next i, .prev i{/* boutons du slider*/
         top: 30px;
         font-size: 48px;
     }
-    .next i{
-        right: 45px;
+    .prev{/*bouton gauche*/
+        left: -56px;
     }
-    .prev i{/* fin bouton slider*/
+    .prev i{/*bouton gauche*/
         left: 45px;
+    }
+    .next{/*bouton droite*/
+        right: -56px;
+    }
+    .next i{/*bouton droite*/
+        right: 45px;
     }
     .dots{/*rehaussage des barres de navigation en bas du slider*/
         top: -7px;
@@ -985,15 +987,15 @@ form textarea{/* mise en forme du textarea*/
         margin: auto;
         height: 42%;
     }
-    #nosservices2imgecran, #nosservices2ecrits {
+    #nosservices2imgecran, #nosservices2ecrits {/*mise en forme des blocs du portfolio*/
         width: 50%;
         height: 100%;
     }
-    #nosservices2imgecran img{
+    #nosservices2imgecran img{/*mise en place de l'image d'ecran*/
         width: 100%;
         padding-left: 0;
     }
-    .inservice2 {
+    .inservice2 {/* les 3 paragrapes UX,UI et SEO*/
         height: 30%;
         padding-top: 60px;
     }
@@ -1008,7 +1010,7 @@ form textarea{/* mise en forme du textarea*/
         width: 250px;
         height: 100px;
     }
-    .menuportfolio:hover{
+    .menuportfolio:hover{/*change la couleur du bouton lors du clic*/
         height: 93px;
         box-shadow: 0 7px 0 cornflowerblue;
     }
@@ -1035,17 +1037,17 @@ form textarea{/* mise en forme du textarea*/
     }
 
     /***Contact***/
-    #contact{
+    #contact{/*mise en forme de la page contact*/
         padding-top: 0;
     }
-    #filtrebleu{
+    #filtrebleu{/*filtre bleuté qur la map*/
         height: 100%;
     }
     #div1contact{/* encart avec le formulaire*/
         width: 27%;
         right: 15%;
     }
-    form input, form textarea{
+    form input, form textarea{/*taille du texte dans les formulaires*/
         font-size: 100%;
     }
 
@@ -1066,7 +1068,7 @@ form textarea{/* mise en forme du textarea*/
     #inmenuheader li{/*agrandissement des boutons dans le header*/
         width: 200px;
     }
-    #inmenuheader li a{
+    #inmenuheader li a{/*mise en place des boutons du menu*/
         padding-top: 100px;
     }
 
@@ -1075,21 +1077,21 @@ form textarea{/* mise en forme du textarea*/
         width: 150px;
         height: 150px;
     }
-    .prev{
-        left: -75px;
-    }
-    .next{
-        right: -75px;
-    }
-    .next i, .prev i{
+    .next i, .prev i{/* boutons du slider*/
         top: 40px;
         font-size: 60px;
     }
-    .next i{
-        right: 50px;
+    .prev{/*bouton de gauche*/
+        left: -75px;
     }
-    .prev i{/* fin bouton slider*/
+    .prev i{/*bouton de gauche*/
         left: 50px;
+    }
+    .next { /*bouton de droite*/
+        right: -75px;
+    }
+    .next i{/*bouton de droite*/
+        right: 50px;
     }
     .dots{/*rehaussage des barres de navigation en bas du slider*/
         top: -5px;
