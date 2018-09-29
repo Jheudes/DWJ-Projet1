@@ -178,7 +178,7 @@ a:hover{/* lors du survol du bouton ajoute une bordure bleu au dessus du bloc. c
     bottom: 0;
     width: 49%;
     height: 5px;
-    margin: 0 3px;
+    margin: 0 1px;
     position: relative;
     display: inline-block;
     background-color: grey;
@@ -526,7 +526,7 @@ a:hover{/* lors du survol du bouton ajoute une bordure bleu au dessus du bloc. c
     position: absolute;
     left: 0;
     width: 100%;
-    height: 88%;
+    height: 84%;
     background-color: transparent;
     background-color: white;
     background-color: rgba(0,130,205,0.1);
@@ -542,7 +542,7 @@ a:hover{/* lors du survol du bouton ajoute une bordure bleu au dessus du bloc. c
     border-radius: 4px;
     position: absolute;
     top: 31%;
-    right: 25%;  
+    right: 10%;  
     z-index: 32;
 }
 #div1contact h2{/*disposition du titre dans l'encart blanc*/
@@ -592,7 +592,7 @@ form textarea{/* mise en forme du textarea*/
 /****************************RESPONSIVE************************************/
 
 /**********Telephones/Tablettes*************/
-@media screen and (max-device-width: 420px){
+@media screen and (max-device-width: 421px){
 
 
     /*** header/navigation ***/
@@ -909,7 +909,7 @@ form textarea{/* mise en forme du textarea*/
         height: 100%;
         position: absolute;
         right: 3%;
-        top: 0%;
+        top: 0;
     }
 
     #contact textarea{/*zone de texte du formulaire*/
@@ -927,7 +927,7 @@ form textarea{/* mise en forme du textarea*/
 
 }
 /****Grands Ecrans*****/
-@media screen and (min-width: 2200px) and (max-height: 3000px){
+@media screen and (min-width: 2200px) and (max-width: 3000px){
     #main_wrapper{/*a   grandissement de l'ecriture sur tout la page*/
         font-size: 2em;
     }
@@ -1055,7 +1055,7 @@ form textarea{/* mise en forme du textarea*/
 }
 
 /****Grands Ecrans*****/
-@media screen and (min-width: 3001px) and (max-height: 4100px){
+@media screen and (min-width: 3001px) and (max-width: 4100px){
     #main_wrapper{/*a   grandissement de l'ecriture sur tout la page*/
         font-size: 2.7em;
     }
@@ -1114,4 +1114,34 @@ form textarea{/* mise en forme du textarea*/
     }
 
 
+}
+
+/***Breakpoint 1*/
+@media screen and (max-width: 800px){
+    #logo{/*reduction de la marge a gauche du logo*/
+        margin-left: 5%;
+    }
+    #inmenuheader{/*reduction de la marge a droite du menu*/
+        padding-right: 3%;
+    }
+    #surslider{/*repositionement de l'ecrit dans l'acceuil*/
+        top: 12%;
+        left: 5%;
+    }
+    .dots{/*cachage des "barres de navigation" du slider*/
+        display: none;
+    }
+    #services, #portfolio{/*mise en height auto car 100% n'etait pas adapté*/
+        height: auto;
+    }
+    #nosservices2{/*l'image d'ecran et les 3 paragraphes. etaient en flex-direction: row;*/
+        flex-direction: column;
+        margin-left: 10%;
+    }
+    #div1contact{/*suppression du min height pour le formulaire*/
+        min-height: unset;
+    }
+    #contact input{/*remise en forme du formulaire*/
+        margin-bottom: 0;
+    }
 }
